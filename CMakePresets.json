@@ -1,0 +1,27 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "zephyr-stm32-base",
+            "hidden": true,
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/_out/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "G491RE",
+            "inherits": "zephyr-stm32-base",
+            "cacheVariables": {
+                "BOARD": "qemu_x86"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "G491RE",
+            "configurePreset": "G491RE"
+        }
+    ]
+}
