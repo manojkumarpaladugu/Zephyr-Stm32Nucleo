@@ -63,3 +63,6 @@ RUN ./setup.sh -t aarch64-zephyr-elf && \
     ./setup.sh -t arm-zephyr-eabi    && \
     ./setup.sh -t x86_64-zephyr-elf  && \
     ./setup.sh -h -c
+
+# Install QEMU
+RUN apt-get install -y qemu-system-arm

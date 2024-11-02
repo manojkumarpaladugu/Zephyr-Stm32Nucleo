@@ -11,14 +11,22 @@
             }
         },
         {
-            "name": "G491RE",
+            "name": "qemu",
             "inherits": "zephyr-stm32-base",
             "cacheVariables": {
-                "BOARD": "qemu_x86"
+                "BOARD": "qemu_cortex_m3"
             }
+        },
+        {
+            "name": "G491RE",
+            "inherits": "zephyr-stm32-base"
         }
     ],
     "buildPresets": [
+        {
+            "name": "qemu",
+            "configurePreset": "qemu"
+        },
         {
             "name": "G491RE",
             "configurePreset": "G491RE"
